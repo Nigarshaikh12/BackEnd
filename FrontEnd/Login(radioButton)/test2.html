@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <!-- CSS -->
+    <!-- load up bootstrap and add some spacing -->
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <style>
+        body         { padding-top:50px; }
+        form, pre    { margin-bottom:50px; }
+    </style>
+
+    <!-- JS -->
+    <!-- load up angular and our custom script -->
+    <script src="http://code.angularjs.org/1.2.13/angular.js"></script>
+    <script src="app.js"></script>
+</head>
+
+<!-- apply our angular app and controller -->
+<body ng-app="formApp" ng-controller="formController">
+<div class="col-xs-12 col-sm-10 col-sm-offset-1">
+<div align="right">
+<button align="right" type="submit" value="login" onclick="location.href='javascript_login.html'">LOGOUT</button>
+</div>
+    
+
+    <form>
+    
+     
+        
+        
+        <!-- RADIO BUTTONS -->
+        <label><b><i>SELECT  YOUR   RISK  APPETITE.....</i></b></label>
+	<br></br>
+	<br></br>
+        <div class="form-group">
+            <div class="radio">
+                <label>
+                    <input type="radio" name="capital" value="HIGH" ng-model="formData.capital">
+                    HIGH
+                </label>
+            </div
+	<br></br>
+            <div class="radio">
+                <label>
+                    <input type="radio" name="capital" value="MID" ng-model="formData.capital">
+                    MID
+					<br></br>
+                </label>
+            </div>
+			
+	<div class="radio">
+                <label>
+                    <input type="radio" name="capital" value="LOW" ng-model="formData.capital">
+                    LOW
+					
+                </label>
+            </div>	
+        </div> 
+   </form>
+    
+    <!-- SHOW OFF OUR FORMDATA OBJECT -->
+    <h2>Sample Form Object</h2>
+    <pre>
+        {{ formData }}
+    </pre>
+
+
+    
+    
+</div>
+</body>
+</html>
